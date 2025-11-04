@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI ASMR - Immersive Relaxation Experience</title>
+    <meta name="description" content="AI-powered ASMR application with personalized soundscapes, gaming experiences, and curated content for deep relaxation and tingles.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7317cf",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#191121",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans"]
+                    },
+                },
+            },
+        };
+    </script>
+
+    <style>
+        body {
+            min-height: 100vh;
+            font-family: 'Spline Sans', sans-serif;
+        }
+
+        .welcome-animation {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(115, 23, 207, 0.4);
+        }
+
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 640px) {
+            .component-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-white">
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-background-dark/80 backdrop-blur-lg border-b border-white/10">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                    <line stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12" x2="12" y1="19" y2="22"></line>
+                </svg>
+                <h1 class="text-2xl font-bold">AI ASMR</h1>
+            </div>
+            <button id="menuToggle" class="p-2 hover:bg-white/10 rounded-lg transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Hero Section -->
+        <section class="text-center mb-16 welcome-animation">
+            <h2 class="text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">
+                Immersive ASMR Experience
+            </h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Discover AI-powered soundscapes, gaming experiences, and curated content designed to relax your mind and trigger deep tingles.
+            </p>
+            <div class="flex gap-4 justify-center flex-wrap">
+                <a href="./welcome_to_ai_asmr/code.html" class="px-8 py-4 bg-primary hover:bg-primary/90 rounded-full font-bold text-lg glow-effect transition-all">
+                    Start Your Journey
+                </a>
+                <a href="./asmr_player/code.html" class="px-8 py-4 bg-white/10 hover:bg-white/20 rounded-full font-bold text-lg transition-all">
+                    Open Player
+                </a>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+            <div class="bg-white/5 rounded-xl p-6 text-center">
+                <div class="text-3xl font-bold text-primary mb-2">50+</div>
+                <div class="text-gray-400">ASMR Tracks</div>
+            </div>
+            <div class="bg-white/5 rounded-xl p-6 text-center">
+                <div class="text-3xl font-bold text-primary mb-2">8</div>
+                <div class="text-gray-400">Categories</div>
+            </div>
+            <div class="bg-white/5 rounded-xl p-6 text-center">
+                <div class="text-3xl font-bold text-primary mb-2">3</div>
+                <div class="text-gray-400">ASMR Games</div>
+            </div>
+            <div class="bg-white/5 rounded-xl p-6 text-center">
+                <div class="text-3xl font-bold text-primary mb-2">100%</div>
+                <div class="text-gray-400">Free</div>
+            </div>
+        </section>
+
+        <!-- Components Grid -->
+        <section>
+            <h3 class="text-3xl font-bold mb-8 text-center">Explore All Features</h3>
+            <div class="component-grid">
+                <!-- Welcome Screen -->
+                <a href="./welcome_to_ai_asmr/code.html" class="group bg-white/5 hover:bg-white/10 rounded-xl p-6 transition-all border border-white/10 hover:border-primary/50">
+                    <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Welcome Screen</h4>
+                    <p class="text-gray-400 text-sm">Start your ASMR journey with our immersive welcome experience</p>
+                </a>
+
+                <!-- ASMR Player -->
+                <a href="./asmr_player/code.html" class="group bg-white/5 hover:bg-white/10 rounded-xl p-6 transition-all border border-white/10 hover:border-primary/50">
+                    <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">ASMR Player</h4>
+                    <p class="text-gray-400 text-sm">Full-featured audio player with real ASMR tracks and ambient sounds</p>
+                </a>
+
+                <!-- Galaxy Explorer Generator -->
+                <a href="./ai_asmr_generator_1/code.html" class="group bg-white/5 hover:bg-white/10 rounded-xl p-6 transition-all border border-white/10 hover:border-primary/50">
+                    <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Galaxy Explorer</h4>
+                    <p class="text-gray-400 text-sm">3D galaxy animation with interactive ASMR sound exploration</p>
+                </a>
+
+                <!-- ASMR Studio Generator -->
+                <a href="./ai_asmr_generator_2/code.html" class="group bg-white/5 hover:bg-white/10 rounded-xl p-6 transition-all border border-white/10 hover:border-primary/50">
+                    <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">ASMR Studio</h4>
+                    <p class="text-gray-400 text-sm">Create custom soundscapes with adjustable parameters and presets</p>
+                </a>
+
+                <!-- Categories -->
+                <a href="./asmr_categories/code.html" class="group bg-white/5 hover:bg-white/10 rounded-xl p-6 transition-all border border-white/10 hover:border-primary/50">
+                    <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">All Categories</h4>
+                    <p class="text-gray-400 text-sm">Browse 8+ ASMR categories from whispering to gaming experiences</p>
+                </a>
+
+                <!-- Showcase -->
+                <a href="./ai_asmr_showcase/code.html" class="group bg-white/5 hover:bg-white/10 rounded-xl p-6 transition-all border border-white/10 hover:border-primary/50">
+                    <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">ASMR Showcase</h4>
+                    <p class="text-gray-400 text-sm">Curated collection of eating, keyboard, and cutting ASMR videos</p>
+                </a>
+
+                <!-- Gaming ASMR -->
+                <a href="./gaming_asmr_experience/code.html" class="group bg-white/5 hover:bg-white/10 rounded-xl p-6 transition-all border border-white/10 hover:border-primary/50">
+                    <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Gaming ASMR</h4>
+                    <p class="text-gray-400 text-sm">Play relaxing ASMR games: Whisper Quest, Tingle Tycoon, and more</p>
+                </a>
+
+                <!-- Customization -->
+                <a href="./ai_customization/code.html" class="group bg-white/5 hover:bg-white/10 rounded-xl p-6 transition-all border border-white/10 hover:border-primary/50">
+                    <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Customize AI ASMR</h4>
+                    <p class="text-gray-400 text-sm">Fine-tune intensity, pacing, sound types, and environments</p>
+                </a>
+
+                <!-- Video Player -->
+                <a href="./asmr_universe_video_player/code.html" class="group bg-white/5 hover:bg-white/10 rounded-xl p-6 transition-all border border-white/10 hover:border-primary/50">
+                    <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Video Player</h4>
+                    <p class="text-gray-400 text-sm">Watch AI-generated ASMR videos with microscope visuals and nature</p>
+                </a>
+
+                <!-- Favorites & Playlists -->
+                <a href="./favorites_&_playlists/code.html" class="group bg-white/5 hover:bg-white/10 rounded-xl p-6 transition-all border border-white/10 hover:border-primary/50">
+                    <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Favorites & Playlists</h4>
+                    <p class="text-gray-400 text-sm">Save your favorite tracks and create custom playlists</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="mt-20 text-center">
+            <h3 class="text-3xl font-bold mb-12">Why Choose AI ASMR?</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/5 rounded-xl p-8">
+                    <div class="text-4xl mb-4">🎧</div>
+                    <h4 class="text-xl font-bold mb-3">High-Quality Audio</h4>
+                    <p class="text-gray-400">All tracks sourced from Freesound, Pixabay, and Mixkit with Creative Commons licenses</p>
+                </div>
+                <div class="bg-white/5 rounded-xl p-8">
+                    <div class="text-4xl mb-4">🤖</div>
+                    <h4 class="text-xl font-bold mb-3">AI-Powered</h4>
+                    <p class="text-gray-400">Intelligent sound mixing and personalized recommendations based on your preferences</p>
+                </div>
+                <div class="bg-white/5 rounded-xl p-8">
+                    <div class="text-4xl mb-4">🎮</div>
+                    <h4 class="text-xl font-bold mb-3">Interactive</h4>
+                    <p class="text-gray-400">Unique gaming experiences that combine ASMR with engaging gameplay</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white/5 mt-20 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold mb-2">AI ASMR</h2>
+                <p class="text-gray-400">Immersive relaxation experience powered by AI</p>
+            </div>
+            <div class="flex gap-6 justify-center mb-6">
+                <a href="./emulator.html" class="text-gray-400 hover:text-primary transition-colors">Mobile Emulator</a>
+                <a href="./TEST_README.md" class="text-gray-400 hover:text-primary transition-colors">Documentation</a>
+                <a href="https://github.com" class="text-gray-400 hover:text-primary transition-colors">GitHub</a>
+            </div>
+            <div class="text-sm text-gray-500">
+                <p>All audio content used under Creative Commons licenses</p>
+                <p class="mt-2">© 2025 AI ASMR. Built with love for relaxation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple menu toggle
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            alert('Menu coming soon! Navigate using the component grid below.');
+        });
+
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
