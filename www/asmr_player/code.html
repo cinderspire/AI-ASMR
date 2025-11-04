@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Spline+Sans%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#7317cf",
+          "background-light": "#f7f6f8",
+          "background-dark": "#191121",
+        },
+        fontFamily: {
+          "display": ["Spline Sans"]
+        },
+        borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+      },
+    },
+  }
+</script>
+<title>AI ASMR Player</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;  
+      scrollbar-width: none;  
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="absolute inset-0 z-0">
+<video autoplay="" class="size-full object-cover" loop="" muted="" playsinline="">
+<source src="https://assets.mixkit.co/videos/preview/mixkit-soft-paints-of-blue-and-orange-in-slow-motion-4258-large.mp4" type="video/mp4"/>
+</video>
+<div class="absolute inset-0 bg-background-dark/80"></div>
+</div>
+<div class="relative z-10 flex flex-grow flex-col justify-between">
+<header class="flex items-center justify-between p-4">
+<button class="text-white">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+</svg>
+</button>
+<h1 class="text-sm font-bold uppercase tracking-wider text-slate-400">Now Playing</h1>
+<button class="text-white">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M128,96a32,32,0,1,0,32,32A32,32,0,0,0,128,96ZM48,96a32,32,0,1,0,32,32A32,32,0,0,0,48,96Zm160,0a32,32,0,1,0,32,32A32,32,0,0,0,208,96Z"></path></svg>
+</button>
+</header>
+<main class="flex flex-col items-center gap-8 px-4 pt-8">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-xl size-64 shadow-2xl shadow-primary/20" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDe6atFL_-4aFZ8h5NvVag4nh6IKOEYvBn2kesvhIU0ZPVX-tHZr1gbWvms520d-jB-iuPs-QMeu2RcfKearluzzCV8Zcbrmq8kuN0B0R3uTgQsftbMQypfnRR88cvWlUfwXF5c5MZ87LTgu0pqmw5MtXF4yXYwqn15J8ujaRoAodulf-khFGZa6_wE2E9QJcxZ4cRgMyd87oBX1ExEw_tBqstNJojZ5rGKJ5__eQ1w-aHXmZkgZlnxnwia46PlFZIpTWW8Gptih2U");'></div>
+<div class="absolute inset-0 bg-primary/20 mix-blend-soft-light rounded-xl"></div>
+</div>
+<div class="text-center">
+<h2 class="text-2xl font-bold text-white">Whispers of the Night</h2>
+<p class="text-base text-slate-400">Luna Serenity</p>
+</div>
+<div class="w-full max-w-sm">
+<div class="relative h-2 rounded-full bg-slate-700">
+<div class="absolute h-full w-1/3 rounded-full bg-primary"></div>
+<div class="absolute h-full w-1/3 flex items-center justify-end">
+<div class="size-4 rounded-full bg-white shadow-md"></div>
+</div>
+</div>
+<div class="flex items-center justify-between text-xs font-medium text-slate-400 mt-2">
+<span>1:17</span>
+<span>3:51</span>
+</div>
+</div>
+<div class="flex w-full max-w-sm items-center justify-center gap-4 pt-4">
+<button class="text-slate-400 hover:text-white transition-colors">
+<svg fill="currentColor" height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M208,47.88V208.12a16,16,0,0,1-24.43,13.43L64,146.77V216a8,8,0,0,1-16,0V40a8,8,0,0,1,16,0v69.23L183.57,34.45A15.95,15.95,0,0,1,208,47.88Z"></path>
+</svg>
+</button>
+<button class="text-slate-400 hover:text-white transition-colors">
+<svg fill="currentColor" height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M232,71.84V184.16a15.92,15.92,0,0,1-24.48,13.34L128,146.86v37.3a15.92,15.92,0,0,1-24.48,13.34L15.33,141.34a15.8,15.8,0,0,1,0-26.68L103.52,58.5A15.91,15.91,0,0,1,128,71.84v37.3L207.52,58.5A15.91,15.91,0,0,1,232,71.84Z"></path>
+</svg>
+</button>
+<button class="flex size-20 items-center justify-center rounded-full bg-primary text-white shadow-lg shadow-primary/40">
+<svg fill="currentColor" height="40" viewBox="0 0 256 256" width="40" xmlns="http://www.w3.org/2000/svg">
+<path d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65a16,16,0,0,1-16.2.3A15.86,15.86,0,0,1,64,216.13V39.87a15.86,15.86,0,0,1,8.12-13.82,16,16,0,0,1,16.2.3L232.4,114.49A15.74,15.74,0,0,1,240,128Z"></path>
+</svg>
+</button>
+<button class="text-slate-400 hover:text-white transition-colors">
+<svg fill="currentColor" height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M248,128a15.76,15.76,0,0,1-7.33,13.34L152.48,197.5A15.91,15.91,0,0,1,128,184.16v-37.3L48.48,197.5A15.91,15.91,0,0,1,24,184.16V71.84A15.91,15.91,0,0,1,48.48,58.5L128,109.14V71.84A15.91,15.91,0,0,1,152.48,58.5l88.19,56.16A15.76,15.76,0,0,1,248,128Z"></path>
+</svg>
+</button>
+<button class="text-slate-400 hover:text-white transition-colors">
+<svg fill="currentColor" height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M208,40V216a8,8,0,0,1-16,0V146.77L72.43,221.55A15.95,15.95,0,0,1,48,208.12V47.88A15.95,15.95,0,0,1,72.43,34.45L192,109.23V40a8,8,0,0,1,16,0Z"></path>
+</svg>
+</button>
+</div>
+<div class="w-full max-w-sm pt-8 space-y-4">
+<div class="flex items-center gap-4">
+<svg class="text-slate-400" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M115.53,24.81a8,8,0,0,0-11,0C78.43,49.25,48,81.18,48,124c0,42,21,69.5,43.55,83.19a8.14,8.14,0,0,0,9.78-1.58,8,8,0,0,0,.69-12.28C84.34,175.76,72,152.22,72,124,72,99.78,92.51,75.46,112,56Z"></path><path d="M187.55,42.81c-17.58-17.54-38.1-41.86-58.55-26Z" opacity="0.2"></path><path d="M140.47,24.81C114.43,49.25,84,81.18,84,124c0,28.22,12.34,51.76,29.93,69.33a8,8,0,0,0,11.38-11.23C110,166.45,100,146.42,100,124c0-21.72,16.54-43.23,35.29-61.19a8,8,0,0,0-10.9-11.72Z"></path><path d="M152,124c0-18.44-11.45-34.45-27.17-48.47a8,8,0,1,0-11.58,11C126.89,98.66,136,110.59,136,124s-9.11,25.34-22.75,37.47a8,8,0,0,0,11.58,11C140.55,158.45,152,142.44,152,124Z"></path><path d="M208,124c0-34.82-24.43-60.91-49.19-79.19a8,8,0,0,0-10.9,11.72C167.46,72.77,184,98.28,184,124s-16.54,51.23-35.29,69.19a8,8,0,0,0,10.9,11.72C183.57,184.91,208,158.82,208,124Z"></path></svg>
+<div class="relative h-1 flex-1 rounded-full bg-slate-700">
+<div class="absolute h-full w-1/2 rounded-full bg-primary/70"></div>
+<div class="absolute h-full w-1/2 flex items-center justify-end">
+<div class="size-3 rounded-full bg-white"></div>
+</div>
+</div>
+<svg class="text-slate-400" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M115.53,24.81a8,8,0,0,0-11,0C78.43,49.25,48,81.18,48,124c0,42,21,69.5,43.55,83.19a8.14,8.14,0,0,0,9.78-1.58,8,8,0,0,0,.69-12.28C84.34,175.76,72,152.22,72,124,72,99.78,92.51,75.46,112,56Z"></path><path d="M140.47,24.81C114.43,49.25,84,81.18,84,124c0,28.22,12.34,51.76,29.93,69.33a8,8,0,0,0,11.38-11.23C110,166.45,100,146.42,100,124c0-21.72,16.54-43.23,35.29-61.19a8,8,0,0,0-10.9-11.72Z"></path><path d="M152,124c0-18.44-11.45-34.45-27.17-48.47a8,8,0,1,0-11.58,11C126.89,98.66,136,110.59,136,124s-9.11,25.34-22.75,37.47a8,8,0,0,0,11.58,11C140.55,158.45,152,142.44,152,124Z"></path><path d="M208,124c0-34.82-24.43-60.91-49.19-79.19a8,8,0,0,0-10.9,11.72C167.46,72.77,184,98.28,184,124s-16.54,51.23-35.29,69.19a8,8,0,0,0,10.9,11.72C183.57,184.91,208,158.82,208,124Z"></path></svg>
+</div>
+</div>
+</main>
+<footer class="sticky bottom-0 bg-background-dark/80 backdrop-blur-md pt-2">
+<div class="px-4 pb-4">
+<button class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-white/10 text-white font-semibold">
+<svg class="lucide lucide-sparkles" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path><path d="M5 3v4"></path><path d="M19 17v4"></path><path d="M3 5h4"></path><path d="M17 19h4"></path></svg>
+<span>Customize Background</span>
+</button>
+</div>
+<div class="px-4 pb-2">
+<p class="text-sm font-semibold text-white mb-3">Visuals</p>
+<div class="flex space-x-3 overflow-x-auto no-scrollbar">
+<div class="flex-shrink-0">
+<div class="size-24 rounded-lg bg-cover bg-center ring-2 ring-primary ring-offset-2 ring-offset-background-dark" style="background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDez07k8ed2MGLpx-pFgi0Q4Dmij_aHLIfmcRWh_UoWaHUhrnS6qwxLdgy_QbAR-k21dO0DMzlu5Mq9TOs4w54xYMg4eyPXgWIHwzTV96RTNE-F7pWMkjr_wR9Fd_X_0FcNxjm7uVR6uN4m8vAK2PZOYDRCJxTxNhjpEG1gOgA4vTvy9Sjddy-Lo47p3kCHk9xKURAjByR8sBeSV0iqMfc3q3Xc5FW1EMBhIn7YawqUi2ipT26MP_CzTxFV2TLekVZmneQgvSsjJDw)"></div>
+<p class="text-xs text-center mt-1.5 text-slate-300">Soft Slide</p>
+</div>
+<div class="flex-shrink-0">
+<div class="size-24 rounded-lg bg-cover bg-center" style="background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDez07k8ed2MGLpx-pFgi0Q4Dmij_aHLIfmcRWh_UoWaHUhrnS6qwxLdgy_QbAR-k21dO0DMzlu5Mq9TOs4w54xYMg4eyPXgWIHwzTV96RTNE-F7pWMkjr_wR9Fd_X_0FcNxjm7uVR6uN4m8vAK2PZOYDRCJxTxNhjpEG1gOgA4vTvy9Sjddy-Lo47p3kCHk9xKURAjByR8sBeSV0iqMfc3q3Xc5FW1EMBhIn7YawqUi2ipT26MP_CzTxFV2TLekVZmneQgvSsjJDw)"></div>
+<p class="text-xs text-center mt-1.5 text-slate-400">Microscope</p>
+</div>
+<div class="flex-shrink-0">
+<div class="size-24 rounded-lg bg-cover bg-center" style="background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDez07k8ed2MGLpx-pFgi0Q4Dmij_aHLIfmcRWh_UoWaHUhrnS6qwxLdgy_QbAR-k21dO0DMzlu5Mq9TOs4w54xYMg4eyPXgWIHwzTV96RTNE-F7pWMkjr_wR9Fd_X_0FcNxjm7uVR6uN4m8vAK2PZOYDRCJxTxNhjpEG1gOgA4vTvy9Sjddy-Lo47p3kCHk9xKURAjByR8sBeSV0iqMfc3q3Xc5FW1EMBhIn7YawqUi2ipT26MP_CzTxFV2TLekVZmneQgvSsjJDw)"></div>
+<p class="text-xs text-center mt-1.5 text-slate-400">Telescope</p>
+</div>
+<div class="flex-shrink-0">
+<div class="size-24 rounded-lg bg-slate-700/50 flex items-center justify-center">
+<svg class="lucide lucide-plus text-slate-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+</div>
+<p class="text-xs text-center mt-1.5 text-slate-400">Add New</p>
+</div>
+</div>
+</div>
+<div class="border-t border-slate-800 pb-4">
+<nav class="flex justify-around items-center pt-2">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,115.55V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V168a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v40a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V115.55a16,16,0,0,1,5.17-11.78l80-75.48.11-.11a16,16,0,0,1,21.53,0,1.14,1.14,0,0,0,.11.11l80,75.48A16,16,0,0,1,224,115.55Z"></path>
+</svg>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M232,128a104,104,0,1,1-104-104A104.11,104.11,0,0,1,232,128Zm-40,0a64,64,0,1,0-64,64A64.07,64.07,0,0,0,192,128Z" opacity="0.2"></path><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a48,48,0,1,1-48-48A48.05,48.05,0,0,1,176,128Zm-16,0a32,32,0,1,0-32,32A32,32,0,0,0,160,128Z"></path>
+</svg>
+<span class="text-xs font-medium">Discover</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M178,32c-20.65,0-38.73,8.88-50,23.89C116.73,40.88,98.65,32,78,32A62.07,62.07,0,0,0,16,94c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,220.66,240,164,240,94A62.07,62.07,0,0,0,178,32ZM128,206.8C109.74,196.16,32,147.69,32,94A46.06,46.06,0,0,1,78,48c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,147.61,146.24,196.15,128,206.8Z"></path>
+</svg>
+<span class="text-xs font-medium">Favorites</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path>
+</svg>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</nav>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

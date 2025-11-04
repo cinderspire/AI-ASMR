@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI ASMR Customization</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#7317cf",
+              "background-light": "#f7f6f8",
+              "background-dark": "#191121",
+            },
+            fontFamily: {
+              display: ["Spline Sans"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+      .slider-thumb::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 9999px;
+        cursor: pointer;
+        margin-top: -8px;
+        border: 2px solid #7317cf;
+      }
+      .slider-thumb::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 9999px;
+        cursor: pointer;
+        border: 2px solid #7317cf;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex flex-col h-screen justify-between">
+<main class="flex-1 overflow-y-auto">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm p-4 flex items-center justify-between">
+<button class="p-2 rounded-full hover:bg-primary/10">
+<span class="material-symbols-outlined text-gray-900 dark:text-white"> arrow_back </span>
+</button>
+<h1 class="text-lg font-bold text-gray-900 dark:text-white flex-1 text-center">Customize AI ASMR</h1>
+<div class="w-10"></div>
+</header>
+<div class="p-6 space-y-8">
+<div class="space-y-4">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white">Intensity</h2>
+<p class="text-gray-600 dark:text-gray-400">Adjust the overall strength of the ASMR experience.</p>
+<div class="flex items-center gap-4">
+<input class="w-full h-1 bg-primary/20 dark:bg-primary/30 rounded-full appearance-none cursor-pointer slider-thumb" max="100" min="0" type="range" value="50"/>
+<span class="text-lg font-semibold text-gray-900 dark:text-white w-10 text-center">50</span>
+</div>
+</div>
+<div class="space-y-4">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white">Pacing</h2>
+<p class="text-gray-600 dark:text-gray-400">Control the speed and rhythm of the ASMR triggers.</p>
+<div class="flex items-center gap-4">
+<input class="w-full h-1 bg-primary/20 dark:bg-primary/30 rounded-full appearance-none cursor-pointer slider-thumb" max="100" min="0" type="range" value="75"/>
+<span class="text-lg font-semibold text-gray-900 dark:text-white w-10 text-center">75</span>
+</div>
+</div>
+<div class="space-y-4">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white">Sound Type</h2>
+<div class="grid grid-cols-2 gap-3">
+<label class="flex items-center justify-center rounded-lg p-3 cursor-pointer border-2 border-transparent bg-primary/10 dark:bg-primary/20 has-[:checked]:bg-primary has-[:checked]:text-white transition-colors">
+<input checked="" class="sr-only" name="sound-type" type="radio" value="whispering"/>
+<span class="font-medium">Whispering</span>
+</label>
+<label class="flex items-center justify-center rounded-lg p-3 cursor-pointer border-2 border-transparent bg-primary/10 dark:bg-primary/20 has-[:checked]:bg-primary has-[:checked]:text-white transition-colors">
+<input class="sr-only" name="sound-type" type="radio" value="tapping"/>
+<span class="font-medium">Tapping</span>
+</label>
+<label class="flex items-center justify-center rounded-lg p-3 cursor-pointer border-2 border-transparent bg-primary/10 dark:bg-primary/20 has-[:checked]:bg-primary has-[:checked]:text-white transition-colors">
+<input class="sr-only" name="sound-type" type="radio" value="crinkling"/>
+<span class="font-medium">Crinkling</span>
+</label>
+<label class="flex items-center justify-center rounded-lg p-3 cursor-pointer border-2 border-transparent bg-primary/10 dark:bg-primary/20 has-[:checked]:bg-primary has-[:checked]:text-white transition-colors">
+<input class="sr-only" name="sound-type" type="radio" value="soft-speaking"/>
+<span class="font-medium">Soft Speaking</span>
+</label>
+</div>
+</div>
+<div class="space-y-6 bg-primary/5 dark:bg-primary/10 p-4 rounded-xl">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white">Human Sound Personalization</h2>
+<div class="space-y-4">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="vocal-intensity">Vocal Intensity</label>
+<div class="flex items-center gap-4">
+<input class="w-full h-1 bg-primary/20 dark:bg-primary/30 rounded-full appearance-none cursor-pointer slider-thumb" id="vocal-intensity" max="100" min="0" type="range" value="60"/>
+<span class="text-lg font-semibold text-gray-900 dark:text-white w-10 text-center">60</span>
+</div>
+</div>
+<div class="space-y-4">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="pacing-speech">Pacing of Speech</label>
+<div class="flex items-center gap-4">
+<input class="w-full h-1 bg-primary/20 dark:bg-primary/30 rounded-full appearance-none cursor-pointer slider-thumb" id="pacing-speech" max="100" min="0" type="range" value="40"/>
+<span class="text-lg font-semibold text-gray-900 dark:text-white w-10 text-center">40</span>
+</div>
+</div>
+<div class="space-y-4">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Type of Mouth Sound</label>
+<div class="grid grid-cols-2 gap-3">
+<label class="flex items-center justify-center rounded-lg p-3 cursor-pointer border-2 border-transparent bg-primary/10 dark:bg-primary/20 has-[:checked]:bg-primary has-[:checked]:text-white transition-colors">
+<input checked="" class="sr-only" name="mouth-sound" type="radio" value="light-whispers"/>
+<span class="font-medium text-sm">Light Whispers</span>
+</label>
+<label class="flex items-center justify-center rounded-lg p-3 cursor-pointer border-2 border-transparent bg-primary/10 dark:bg-primary/20 has-[:checked]:bg-primary has-[:checked]:text-white transition-colors">
+<input class="sr-only" name="mouth-sound" type="radio" value="gentle-clicks"/>
+<span class="font-medium text-sm">Gentle Clicks</span>
+</label>
+<label class="flex items-center justify-center rounded-lg p-3 cursor-pointer border-2 border-transparent bg-primary/10 dark:bg-primary/20 has-[:checked]:bg-primary has-[:checked]:text-white transition-colors">
+<input class="sr-only" name="mouth-sound" type="radio" value="soft-breathing"/>
+<span class="font-medium text-sm">Soft Breathing</span>
+</label>
+<label class="flex items-center justify-center rounded-lg p-3 cursor-pointer border-2 border-transparent bg-primary/10 dark:bg-primary/20 has-[:checked]:bg-primary has-[:checked]:text-white transition-colors">
+<input class="sr-only" name="mouth-sound" type="radio" value="inaudible"/>
+<span class="font-medium text-sm">Inaudible</span>
+</label>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white">Environment</h2>
+<div class="grid grid-cols-2 gap-3">
+<label class="flex items-center justify-center rounded-lg p-3 cursor-pointer border-2 border-transparent bg-primary/10 dark:bg-primary/20 has-[:checked]:bg-primary has-[:checked]:text-white transition-colors">
+<input class="sr-only" name="environment" type="radio" value="rainforest"/>
+<span class="font-medium">Rainforest</span>
+</label>
+<label class="flex items-center justify-center rounded-lg p-3 cursor-pointer border-2 border-transparent bg-primary/10 dark:bg-primary/20 has-[:checked]:bg-primary has-[:checked]:text-white transition-colors">
+<input checked="" class="sr-only" name="environment" type="radio" value="cozy-room"/>
+<span class="font-medium">Cozy Room</span>
+</label>
+<label class="flex items-center justify-center rounded-lg p-3 cursor-pointer border-2 border-transparent bg-primary/10 dark:bg-primary/20 has-[:checked]:bg-primary has-[:checked]:text-white transition-colors">
+<input class="sr-only" name="environment" type="radio" value="beach"/>
+<span class="font-medium">Beach</span>
+</label>
+<label class="flex items-center justify-center rounded-lg p-3 cursor-pointer border-2 border-transparent bg-primary/10 dark:bg-primary/20 has-[:checked]:bg-primary has-[:checked]:text-white transition-colors">
+<input class="sr-only" name="environment" type="radio" value="cityscape"/>
+<span class="font-medium">Cityscape</span>
+</label>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-background-light dark:bg-background-dark shadow-[0_-2px_10px_rgba(0,0,0,0.1)] dark:shadow-[0_-2px_10px_rgba(0,0,0,0.3)]">
+<div class="p-4">
+<button class="w-full h-14 bg-primary text-white text-lg font-bold rounded-xl flex items-center justify-center shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all">
+            Start ASMR
+          </button>
+</div>
+<nav class="flex justify-around items-center py-2 pb-safe">
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined"> home </span>
+<span class="text-xs">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined"> search </span>
+<span class="text-xs">Explore</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary dark:text-primary" href="#">
+<span class="material-symbols-outlined"> tune </span>
+<span class="text-xs font-bold">Customize</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined"> favorite </span>
+<span class="text-xs">Favorites</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined"> person </span>
+<span class="text-xs">Profile</span>
+</a>
+</nav>
+</footer>
+</div>
+</body></html>

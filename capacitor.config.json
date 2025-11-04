@@ -1,0 +1,30 @@
+{
+  "appId": "com.aiasmr.app",
+  "appName": "AI ASMR",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "server": {
+    "cleartext": true,
+    "allowNavigation": [
+      "*.pixabay.com",
+      "*.unsplash.com",
+      "*.mixkit.co",
+      "*.googleapis.com",
+      "*.gstatic.com",
+      "cdn.tailwindcss.com"
+    ]
+  },
+  "android": {
+    "backgroundColor": "#191121",
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": true
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "backgroundColor": "#191121",
+      "showSpinner": false
+    }
+  }
+}

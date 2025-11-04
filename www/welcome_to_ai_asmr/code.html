@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>AI ASMR Welcome</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#9344f0",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#100818",
+                        "accent-glow": "#5e27a3",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(147, 68, 240, 0.6)',
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        .bg-gradient-radial-faded {
+            background-image: radial-gradient(circle at 50% 0, rgba(147, 68, 240, 0.4) 0%, rgba(147, 68, 240, 0) 40%);
+        }
+        .dark .text-glow {
+            text-shadow: 0 0 15px rgba(147, 68, 240, 0.8);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-dark font-display text-white">
+    <div class="relative flex flex-col min-h-screen overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-0 left-0 w-full h-1/2 bg-gradient-radial-faded opacity-70 pointer-events-none"></div>
+            <div class="absolute bottom-0 right-0 w-3/4 h-3/4 bg-accent-glow rounded-full filter blur-3xl opacity-30 pointer-events-none"></div>
+        </div>
+        <main class="flex-grow flex flex-col items-center justify-center p-6 text-center z-10">
+            <div class="w-28 h-28 mb-6 rounded-full bg-primary/30 flex items-center justify-center shadow-glow">
+                <svg class="text-primary" fill="none" height="56" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="56" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                    <line x1="12" x2="12" y1="19" y2="22"></line>
+                </svg>
+            </div>
+            <h1 class="text-4xl font-bold tracking-tight text-white mb-1 text-glow">Immersive ASMR</h1>
+            <h2 class="text-4xl font-bold text-primary tracking-tight mb-6">For Your Soul</h2>
+            <p class="max-w-md text-white/80 mb-10 text-lg">
+                Let our AI craft deeply personalized soundscapes. Unwind, relax, and find your calm in a world of unique ASMR experiences designed just for you.
+            </p>
+            <div class="w-full max-w-sm space-y-4">
+                <button class="w-full bg-primary text-white font-bold h-14 rounded-xl text-lg hover:bg-primary/90 transition-colors shadow-lg shadow-primary/40">
+                    Begin Your Journey
+                </button>
+                <button class="w-full bg-white/10 text-white font-bold h-14 rounded-xl text-lg hover:bg-white/20 transition-colors">
+                    Learn More
+                </button>
+            </div>
+        </main>
+        <footer class="p-8 flex justify-center items-center z-10">
+            <button class="w-14 h-14 flex items-center justify-center rounded-full bg-primary/20 hover:bg-primary/30 transition-colors shadow-md">
+                <svg class="text-primary" fill="none" height="32" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+                </svg>
+            </button>
+        </footer>
+    </div>
+</body>
+</html>
