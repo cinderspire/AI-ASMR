@@ -1,0 +1,38 @@
+{
+  "name": "ai-asmr",
+  "version": "1.0.0",
+  "description": "AI ASMR mobile app with AI ASMR GENERATOR, ASMR GAMES, ASMR PLAYER",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "serve": "python3 -m http.server 8000",
+    "android:build": "npx cap sync android && cd android && ./gradlew assembleDebug",
+    "android:open": "npx cap open android",
+    "android:sync": "npx cap sync android",
+    "android:clean": "cd android && ./gradlew clean"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^7.4.4",
+    "@capacitor/cli": "^7.4.4",
+    "@capacitor/core": "^7.4.4",
+    "@testing-library/dom": "^9.3.4",
+    "@testing-library/jest-dom": "^6.1.5",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "<rootDir>/tests/setup.js"
+    ],
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "collectCoverageFrom": [
+      "**/*.html",
+      "!**/node_modules/**",
+      "!**/tests/**"
+    ]
+  }
+}

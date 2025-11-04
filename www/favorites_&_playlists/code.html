@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#7317cf",
+              "background-light": "#f7f6f8",
+              "background-dark": "#191121",
+            },
+            fontFamily: {
+              "display": ["Spline Sans"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    .grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col justify-between">
+<div>
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold text-slate-900 dark:text-white pr-10">Favorites &amp; Playlists</h1>
+</div>
+<div class="border-b border-slate-200 dark:border-slate-800">
+<div class="flex px-4">
+<a class="flex-1 border-b-2 border-primary py-3 text-center text-sm font-bold text-primary" href="#">Favorites</a>
+<a class="flex-1 border-b-2 border-transparent py-3 text-center text-sm font-medium text-slate-500 dark:text-slate-400" href="#">Playlists</a>
+</div>
+</div>
+</header>
+<main class="p-4">
+    <div class="grid grid-cols-2 gap-4">
+        <div class="flex flex-col items-center text-center">
+            <div class="h-32 w-32 mb-2 flex-shrink-0 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAuX98s9U2tDwutsS9Jiey5uCAJFQju38ez2YqjVivnGsRufEk6Co2pPAnXTi0XnflGiqbsnRSkI5k3zu9V6UrZa6dm_5rAJpDIjYDyFVNH2Log2YPNUWFJLOYSePsZMgKNyxRUY0tNq29C5NXusJBCqaBZfle2R5Rg6W2pPBYYn7exXsilmpMUzYzK5mhhVOZmN6izIr1Kiq_GZBz7RJyQ_ywOXc4drTK5TC6bGUvKMzYh5o-SsjnVpFwIV3r0fCYmhaxEGq97N8w");'></div>
+            <p class="font-semibold text-sm text-slate-900 dark:text-white">Rainy Day</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Relaxing Rain</p>
+            <button class="mt-2 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white">
+                <span class="material-symbols-outlined text-sm">play_arrow</span>
+            </button>
+        </div>
+        <div class="flex flex-col items-center text-center">
+            <div class="h-32 w-32 mb-2 flex-shrink-0 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDitdYdaD0A2TCxfDAC6-Y0xLNS9Tr51lCNdYWBq8X7O7w2hrpfEortHvOghFlZTE8B7YjLXCp5bikRunoexf19yHx2mjM4B-WQurJA596pn8J7o_bbptxWoppaoj0J8m8yr27EzRMqMj4vREqq01zamWkGCLFfCdWhOoRgtp4DaTNLLRjis3sdHMBCbo2cPuLASsb46IBG9EMsO5OxMRxwjeDNwi1Pv8wzIGzB_G_YA0G2aS8ChFbifnv9KqYF-dGjqx5x1FowxUs");'></div>
+            <p class="font-semibold text-sm text-slate-900 dark:text-white">Whispering Woods</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Gentle Whispers</p>
+            <button class="mt-2 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white">
+                <span class="material-symbols-outlined text-sm">play_arrow</span>
+            </button>
+        </div>
+        <div class="flex flex-col items-center text-center">
+            <div class="h-32 w-32 mb-2 flex-shrink-0 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZh7dI4e-aPkI9GYFn-NN_ooOEH7_G1v5sxC_m-kh8Gxv10lddsOy8Y71LVlDcW175gFvBVs3dJqWCz8z2bczd3o4bPkBz25F1CLtCmkiB-IYBLEzI0ENeMVMlfN0YE98VcFkvrdmgS7oLaMBr7pod8f35l0PJ3dxz5Hsf4qEgXmxXNWFnLSUT_FseGv7HSSjqCdGd9_5Ym6-IdEl32NIUSpljfsgsSmuR4wIHReRyHZuTDUg7WaD0d2M3I9E_aCEcR1qcEPsLHSA");'></div>
+            <p class="font-semibold text-sm text-slate-900 dark:text-white">Coastal Calm</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Ocean Waves</p>
+            <button class="mt-2 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white">
+                <span class="material-symbols-outlined text-sm">play_arrow</span>
+            </button>
+        </div>
+        <div class="flex flex-col items-center text-center">
+            <div class="h-32 w-32 mb-2 flex-shrink-0 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD0XtDngheVjlFyFrTD2q4h6lLeK3C4H11sMOprMH5SvkPB92KGygZD9LYLIdoCcoOKw-u_xctwhP3tO0G5NOifZHR_ZoTulav7UaH99E6JSmXcCyCg50ETNpU_GCwFZFrvA2rtzYfMIPi5rwVIZTv4MZuRyP93d4PBezUNm7uagYUB0SGVRNUvvNagFWA4CZaepCnNBdS2fTz9UOnqV5BQuwz7XReDb70PuRQe8_OImwd3zdR_sxC0UN0u-eQB012ABNZWrJ-i18E");'></div>
+            <p class="font-semibold text-sm text-slate-900 dark:text-white">Fireside Stories</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Crackling Fire</p>
+            <button class="mt-2 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white">
+                <span class="material-symbols-outlined text-sm">play_arrow</span>
+            </button>
+        </div>
+    </div>
+</main>
+</div>
+<footer class="sticky bottom-0 border-t border-slate-200 dark:border-slate-800 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm pb-safe">
+<nav class="flex items-center justify-around px-4 pt-2 pb-3">
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">list_alt</span>
+<span class="text-xs font-medium">Categories</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">add_box</span>
+<span class="text-xs font-medium">Create</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined font-bold">bookmark</span>
+<span class="text-xs font-bold">Favorites</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

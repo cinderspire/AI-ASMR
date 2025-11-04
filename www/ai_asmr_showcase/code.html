@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI ASMR Showcase</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Spline+Sans:wght@400;500;700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#7317cf",
+              "background-light": "#f7f6f8",
+              "background-dark": "#191121",
+            },
+            fontFamily: {
+              display: ["Spline Sans"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px"
+            },
+          },
+        },
+      };
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    .mood-slider input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 8px;
+      background: linear-gradient(to right, var(--tw-gradient-stops));
+      outline: none;
+      opacity: 0.7;
+      transition: opacity .2s;
+    }
+    .mood-slider input[type="range"]:hover {
+      opacity: 1;
+    }
+    .mood-slider input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background: #7317cf;
+      cursor: pointer;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+    .mood-slider input[type="range"]::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      background: #7317cf;
+      cursor: pointer;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col justify-between overflow-x-hidden">
+<main class="flex-grow">
+<header class="sticky top-0 z-10 flex items-center bg-background-light/80 px-4 py-3 backdrop-blur-sm dark:bg-background-dark/80">
+<div class="flex-1"></div>
+<h1 class="flex-1 text-center text-lg font-bold text-gray-900 dark:text-white">AI ASMR</h1>
+<div class="flex flex-1 items-center justify-end">
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-gray-600 hover:bg-primary/10 hover:text-primary dark:text-gray-400 dark:hover:bg-primary/20 dark:hover:text-primary">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+</button>
+</div>
+</header>
+
+<section class="py-6 px-4">
+  <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Find Your Mood</h2>
+  <div class="mood-slider relative w-full">
+    <div class="flex justify-between text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+      <span>Relaxing</span>
+      <span>Energizing</span>
+    </div>
+    <input type="range" min="0" max="100" value="50" class="w-full h-2 rounded-lg appearance-none cursor-pointer accent-primary" style="--tw-gradient-stops: #7317cf, #f87126;">
+    <div class="flex justify-center mt-2 text-sm font-medium text-gray-700 dark:text-gray-300">Focus</div>
+  </div>
+</section>
+
+<section class="py-6">
+<h2 class="px-4 pb-3 text-2xl font-bold text-gray-900 dark:text-white">AI ASMR Eating</h2>
+<div class="flex overflow-x-auto px-4 [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch gap-4">
+<div class="flex w-40 flex-shrink-0 flex-col gap-2">
+<div class="group relative w-full overflow-hidden rounded-xl">
+<img alt="ASMR Eating" class="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh6bRciPW0VOz7PcE-AsCVZTJctifJKYmhT2LyrJZ2x7h3fTWw5bDJuopfmyM1cQ8SSPHBBgpW-ORecuEu5glgOmLflUuF3fz3jp6b9yeoe-xMXejfAXHhxN623kD2uMCubtxBW344t0r1Mvaq_7D-UnBi40djqkOomWIi4T8wqq29D_apExNLxEksQGiffTOtAMt7K6DhTH_YSLZZ8udkz6Vz8aozXrBoAqXwqmONfEV-d4K6uKpXKwVydtb_5BWSPS8LY4XqG0E"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity group-hover:opacity-100">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/80 text-white">
+<svg fill="currentColor" height="28" viewBox="0 0 256 256" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="M240,128a15.74,15.74,0,0,1-22.23,14L50.2,240.54A16,16,0,0,1,24.3,225.82V30.18A16,16,0,0,1,50.2,15.46L217.77,114A15.74,15.74,0,0,1,240,128Z"></path>
+</svg>
+</div>
+</div>
+</div>
+<p class="truncate text-sm font-medium text-gray-700 dark:text-gray-300">Relaxing Crunch</p>
+</div>
+<div class="flex w-40 flex-shrink-0 flex-col gap-2">
+<div class="group relative w-full overflow-hidden rounded-xl">
+<img alt="ASMR Eating" class="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8Ial_wNuS0KitE45loq0aVhho81w5qxIoLu5a776qooWIb46NLQY1HWyogUhYnZMAPq0AC4gM-m7C5uv0ZhfOoqeD7zY2qyMXilKyab1Eq2ZrVyOVZ6ki5EBEqihZ13XS9YMZDyZsTnJAekoz9DTIwdsMfv7Na7N13tdCFiFJp00h1wzNDbpQeEPXWZc8TP4Ys2XXAKtD9zBQfxtdrhKHKtgmZZ_7jU9LLhsW0ZI5tWT5Zt2WIh1vi7GpplHgUYFxEh6x0ZXrrDk"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity group-hover:opacity-100">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/80 text-white">
+<svg fill="currentColor" height="28" viewBox="0 0 256 256" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="M240,128a15.74,15.74,0,0,1-22.23,14L50.2,240.54A16,16,0,0,1,24.3,225.82V30.18A16,16,0,0,1,50.2,15.46L217.77,114A15.74,15.74,0,0,1,240,128Z"></path>
+</svg>
+</div>
+</div>
+</div>
+<p class="truncate text-sm font-medium text-gray-700 dark:text-gray-300">Gentle Chewing</p>
+</div>
+<div class="flex w-40 flex-shrink-0 flex-col gap-2">
+<div class="group relative w-full overflow-hidden rounded-xl">
+<img alt="ASMR Eating" class="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD49qpJpRybJ34AWm_s84LyTecC9Y19TXpTGSOFZY5tQ2joEo3pxvbqQn65PVaf2xv7LB3sLF-fH6R_41hkX2x1jfibPNs1FTzvUIycsF5WkSa5dVk82YtrW-agJI8pGY4wVUDr8lZg9yU_rDnGjjDafcis-f9qjOOStOX9bDDi5pAnOE2KVb0B4Z5kwLXKmGse-4GZ8C9_iKKwvpCC_JXzROx3ZoR4mSQaxgzPoulJMkBwwSzfGtjp3qaj4C4ApJQKbQCt395DqOs"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity group-hover:opacity-100">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/80 text-white">
+<svg fill="currentColor" height="28" viewBox="0 0 256 256" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="M240,128a15.74,15.74,0,0,1-22.23,14L50.2,240.54A16,16,0,0,1,24.3,225.82V30.18A16,16,0,0,1,50.2,15.46L217.77,114A15.74,15.74,0,0,1,240,128Z"></path>
+</svg>
+</div>
+</div>
+</div>
+<p class="truncate text-sm font-medium text-gray-700 dark:text-gray-300">Soft Bites</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-6">
+<h2 class="px-4 pb-3 text-2xl font-bold text-gray-900 dark:text-white">AI Keyboard ASMR</h2>
+<div class="flex overflow-x-auto px-4 [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch gap-4">
+<div class="flex w-40 flex-shrink-0 flex-col gap-2">
+<div class="group relative w-full overflow-hidden rounded-xl">
+<img alt="ASMR Keyboard" class="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArsO5gf6BWyktnv3wPa3rdJu7H4NdPhU-l-OQNBEoqYoXz_bpz9wY0Ok3zMD2ZvERHROrzx5aMh2n3bzoc2fcm0cXbVTNZ8HVUew3oGJ9nK8Eq34vZFaBF5BTU54L-kfjNkHF3rqhYruqRgIbONNvqHKQ_iKq4omWf05N8JxVA9XxwrvtJyK6ySmBmQM2gu0VIQdYduH2Y9DBJplq7WkQ-p3p0w6IlT8Bv5oazd-8GLhtNENw5Vx5HYAU2rZU7OieXnD5ezLJKPjs"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity group-hover:opacity-100">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/80 text-white">
+<svg fill="currentColor" height="28" viewBox="0 0 256 256" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="M240,128a15.74,15.74,0,0,1-22.23,14L50.2,240.54A16,16,0,0,1,24.3,225.82V30.18A16,16,0,0,1,50.2,15.46L217.77,114A15.74,15.74,0,0,1,240,128Z"></path>
+</svg>
+</div>
+</div>
+</div>
+<p class="truncate text-sm font-medium text-gray-700 dark:text-gray-300">Clicky Keys</p>
+</div>
+<div class="flex w-40 flex-shrink-0 flex-col gap-2">
+<div class="group relative w-full overflow-hidden rounded-xl">
+<img alt="ASMR Keyboard" class="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT2X1p3Cm0iRoMrZHWpgoLX0RoJwg-zdvDoxvIo953aGMTVjLEpJvjoEPVhzJaIErpEdSMuB-EEMNM3gaCToLp2OSBOuKt4ecpTxvuWkim87yzXemoOwajOzXSnrQxoWiekx_4c9-zskCspdu5Myj2tg-KOEzsyBWoDBwSDo2N6_QrR-ClkJeGfBOqoBFU_wlDHUsFUC-lUtdCxgHEoua9_JrCugzxyEcENlK8CgUmYxz4j7KZUPY9iAwaQUZQ_j2a1GE3COTCx2o"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity group-hover:opacity-100">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/80 text-white">
+<svg fill="currentColor" height="28" viewBox="0 0 256 256" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="M240,128a15.74,15.74,0,0,1-22.23,14L50.2,240.54A16,16,0,0,1,24.3,225.82V30.18A16,16,0,0,1,50.2,15.46L217.77,114A15.74,15.74,0,0,1,240,128Z"></path>
+</svg>
+</div>
+</div>
+</div>
+<p class="truncate text-sm font-medium text-gray-700 dark:text-gray-300">Mechanical Typing</p>
+</div>
+<div class="flex w-40 flex-shrink-0 flex-col gap-2">
+<div class="group relative w-full overflow-hidden rounded-xl">
+<img alt="ASMR Keyboard" class="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAmAnCpAwiewJuogyftiGI94NBY9-ay0faY1ho22NzFeYHt8Ov8-Jzmkq3jCfJWa5Hr3YEAByds9iFpo78Xyr7WX_YXJOgmygL-G3dOY6dezl0GTqmthIT3OUT9O8t59d2w0iGxaZ8tIpcC3-GSxikI7coi-SX8SX_eUvs2-BLl_6RmWvgT9dfhjhJ-jj2GxyZFqNViq3Y9p4ZV9KIA_PpFsbjLGHfmoaPtrsK39LxIdvlv1rdQwkpGckfMonWN9Uj-UtJ6cwr1HA"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity group-hover:opacity-100">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/80 text-white">
+<svg fill="currentColor" height="28" viewBox="0 0 256 256" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="M240,128a15.74,15.74,0,0,1-22.23,14L50.2,240.54A16,16,0,0,1,24.3,225.82V30.18A16,16,0,0,1,50.2,15.46L217.77,114A15.74,15.74,0,0,1,240,128Z"></path>
+</svg>
+</div>
+</div>
+</div>
+<p class="truncate text-sm font-medium text-gray-700 dark:text-gray-300">Gentle Tapping</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-6">
+<h2 class="px-4 pb-3 text-2xl font-bold text-gray-900 dark:text-white">AI ASMR Cutting</h2>
+<div class="flex overflow-x-auto px-4 [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch gap-4">
+<div class="flex w-40 flex-shrink-0 flex-col gap-2">
+<div class="group relative w-full overflow-hidden rounded-xl">
+<img alt="ASMR Cutting" class="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXF8fn9K9qrCH7J6Uq4cryqC9yB4XvaQzau-KBlnSFkczthKExN9zNyQwLz0glZy3yojB6wFP288JU7BJ3ORhyLjQuobtWXTkmwU5A-r2-LlFyRdk65S7mhjJR2oB_3RG53m_7hbRfZzbjhsSKep_4n5mVMZJJmVkNsiryWmkF40AiSdtT7IlGSJ-2dE3no_J3YbhqF57QgN6nkpVy-jj-co_zLcJWskwoOMIjlMrQWV2VSRQOnJyA1pdU3UeB1T9Fe0sv-mlCPV4"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity group-hover:opacity-100">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/80 text-white">
+<svg fill="currentColor" height="28" viewBox="0 0 256 256" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="M240,128a15.74,15.74,0,0,1-22.23,14L50.2,240.54A16,16,0,0,1,24.3,225.82V30.18A16,16,0,0,1,50.2,15.46L217.77,114A15.74,15.74,0,0,1,240,128Z"></path>
+</svg>
+</div>
+</div>
+</div>
+<p class="truncate text-sm font-medium text-gray-700 dark:text-gray-300">Scissor Snips</p>
+</div>
+<div class="flex w-40 flex-shrink-0 flex-col gap-2">
+<div class="group relative w-full overflow-hidden rounded-xl">
+<img alt="ASMR Cutting" class="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXYiGPuL1rZnaJ6DivXbJuI4mQp9RsO1YHoXEEJVtg3XhwPSjzpZ3YL8DZTuC32YRUplmC6CwIMsctKai8yj3KSVFoV0KeAGlPz8V99N9etmP8xY6kEDP9VEk1ily6gj5kCVOBY8cB_AcBL3dZTGMBnMhI6gyI7TXt3rQr6q-bN98B-ixz2w6zUi8q-p1Bm3PRkuzavUxWAUrK9QCwlUVMKIhK4QQTwe3N2RDyJljcYral50PADVQNmD232rJNrOjGf_1jt9qQpEw"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity group-hover:opacity-100">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/80 text-white">
+<svg fill="currentColor" height="28" viewBox="0 0 256 256" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="M240,128a15.74,15.74,0,0,1-22.23,14L50.2,240.54A16,16,0,0,1,24.3,225.82V30.18A16,16,0,0,1,50.2,15.46L217.77,114A15.74,15.74,0,0,1,240,128Z"></path>
+</svg>
+</div>
+</div>
+</div>
+<p class="truncate text-sm font-medium text-gray-700 dark:text-gray-300">Paper Slicing</p>
+</div>
+<div class="flex w-40 flex-shrink-0 flex-col gap-2">
+<div class="group relative w-full overflow-hidden rounded-xl">
+<img alt="ASMR Cutting" class="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEprjxE_MTkGGjeXjN2ed0kTyOHseEhNPR3kLSjNamRuuDCMIQXGpM6yrQ7vITwqWbfk5KZcKzynRWWD281fyR98TPY4f_4aQNRCqpXFed_eNjALx8ToqvwdpGuGnu_jPjItjMhlZr7N62xfVczLSIPCF1unQ2Fjaz5R1y0MMHhlMVXvpSiTcaphAr8yfUStDmXRp-vpbaOn4mQ9TqjwmHt-2RYHXoqyAIUkaZYErhi05zfEbjDES1FyN62CSGldTM2ZwOQA-0JMU"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity group-hover:opacity-100">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/80 text-white">
+<svg fill="currentColor" height="28" viewBox="0 0 256 256" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="M240,128a15.74,15.74,0,0,1-22.23,14L50.2,240.54A16,16,0,0,1,24.3,225.82V30.18A16,16,0,0,1,50.2,15.46L217.77,114A15.74,15.74,0,0,1,240,128Z"></path>
+</svg>
+</div>
+</div>
+</div>
+<p class="truncate text-sm font-medium text-gray-700 dark:text-gray-300">Crisp Cuts</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="sticky bottom-0 z-10 border-t border-primary/20 bg-background-light/80 pb-safe dark:border-primary/30 dark:bg-background-dark/80 backdrop-blur-sm">
+<nav class="flex items-center justify-around px-2 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<div class="flex h-8 items-center justify-center">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,115.55V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V168a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v40a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V115.55a16,16,0,0,1,5.17-11.78l80-75.48.11-.11a16,16,0,0,1,21.53,0,1.14,1.14,0,0,0,.11.11l80,75.48A16,16,0,0,1,224,115.55Z"></path>
+</svg>
+</div>
+<p class="text-xs font-semibold">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">
+<div class="flex h-8 items-center justify-center">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M80,64a8,8,0,0,1,8-8H216a8,8,0,0,1,0,16H88A8,8,0,0,1,80,64Zm136,56H88a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm0,64H88a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16ZM44,52A12,12,0,1,0,56,64,12,12,0,0,0,44,52Zm0,64a12,12,0,1,0,12,12A12,12,0,0,0,44,116Zm0,64a12,12,0,1,0,12,12A12,12,0,0,0,44,180Z"></path>
+</svg>
+</div>
+<p class="text-xs font-medium">Categories</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white shadow-lg shadow-primary/30">
+<svg fill="currentColor" height="28" viewBox="0 0 256 256" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path>
+</svg>
+</div>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">
+<div class="flex h-8 items-center justify-center">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M178,32c-20.65,0-38.73,8.88-50,23.89C116.73,40.88,98.65,32,78,32A62.07,62.07,0,0,0,16,94c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,220.66,240,164,240,94A62.07,62.07,0,0,0,178,32ZM128,206.8C109.74,196.16,32,147.69,32,94A46.06,46.06,0,0,1,78,48c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,147.61,146.24,196.15,128,206.8Z"></path>
+</svg>
+</div>
+<p class="text-xs font-medium">Favorites</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">
+<div class="flex h-8 items-center justify-center">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path>
+</svg>
+</div>
+<p class="text-xs font-medium">Profile</p>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>
