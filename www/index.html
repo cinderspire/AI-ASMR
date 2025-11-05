@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="AI-powered ASMR mobile application with personalized soundscapes">
+    <meta name="theme-color" content="#191121">
+    <title>AI ASMR</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Capacitor Core (will be injected by Capacitor CLI in native builds) -->
+
+    <!-- App Styles -->
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#9344f0",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#100818",
+                        "accent-glow": "#5e27a3",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(147, 68, 240, 0.6)',
+                    }
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-background-dark font-display text-white">
+    <!-- Offline Banner -->
+    <div id="offline-banner" class="hidden fixed top-0 left-0 right-0 bg-yellow-500/90 text-black text-center py-2 px-4 z-50 font-medium">
+        <span id="offline-message">Çevrimdışı moddasınız</span>
+    </div>
+
+    <!-- App Container -->
+    <div id="app" class="relative flex flex-col min-h-screen overflow-hidden">
+        <!-- Background Effects -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-0 left-0 w-full h-1/2 bg-gradient-radial-faded opacity-70 pointer-events-none"></div>
+            <div class="absolute bottom-0 right-0 w-3/4 h-3/4 bg-accent-glow rounded-full filter blur-3xl opacity-30 pointer-events-none"></div>
+        </div>
+
+        <!-- Header -->
+        <header class="relative z-10 p-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center">
+                    <svg class="text-primary w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" x2="12" y1="19" y2="22"></line>
+                    </svg>
+                </div>
+                <span class="text-xl font-bold">AI ASMR</span>
+            </div>
+
+            <div class="flex items-center space-x-2">
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                    <svg id="theme-icon-dark" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                    <svg id="theme-icon-light" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                </button>
+
+                <!-- Settings -->
+                <button id="settings-btn" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main id="main-content" class="flex-grow p-6 z-10 overflow-y-auto">
+            <!-- Welcome Screen -->
+            <div id="welcome-screen" class="flex flex-col items-center justify-center text-center min-h-full">
+                <div class="w-28 h-28 mb-6 rounded-full bg-primary/30 flex items-center justify-center shadow-glow">
+                    <svg class="text-primary" fill="none" height="56" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="56">
+                        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" x2="12" y1="19" y2="22"></line>
+                    </svg>
+                </div>
+                <h1 class="text-4xl font-bold tracking-tight text-white mb-1 text-glow">Immersive ASMR</h1>
+                <h2 class="text-4xl font-bold text-primary tracking-tight mb-6">For Your Soul</h2>
+                <p class="max-w-md text-white/80 mb-10 text-lg">
+                    Let our AI craft deeply personalized soundscapes. Unwind, relax, and find your calm in a world of unique ASMR experiences designed just for you.
+                </p>
+                <div class="w-full max-w-sm space-y-4">
+                    <button id="start-btn" class="w-full bg-primary text-white font-bold h-14 rounded-xl text-lg hover:bg-primary/90 transition-colors shadow-lg shadow-primary/40">
+                        Begin Your Journey
+                    </button>
+                    <button id="learn-more-btn" class="w-full bg-white/10 text-white font-bold h-14 rounded-xl text-lg hover:bg-white/20 transition-colors">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+
+            <!-- Categories Screen -->
+            <div id="categories-screen" class="hidden">
+                <h2 class="text-3xl font-bold mb-6">ASMR Categories</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="category-card bg-white/10 rounded-xl p-6 hover:bg-white/20 transition-colors cursor-pointer">
+                        <div class="text-4xl mb-3">🌧️</div>
+                        <h3 class="font-bold text-lg">Nature Sounds</h3>
+                        <p class="text-sm text-white/70 mt-2">Rain, forest, ocean waves</p>
+                    </div>
+                    <div class="category-card bg-white/10 rounded-xl p-6 hover:bg-white/20 transition-colors cursor-pointer">
+                        <div class="text-4xl mb-3">🎵</div>
+                        <h3 class="font-bold text-lg">Ambient Music</h3>
+                        <p class="text-sm text-white/70 mt-2">Soft melodies, lo-fi beats</p>
+                    </div>
+                    <div class="category-card bg-white/10 rounded-xl p-6 hover:bg-white/20 transition-colors cursor-pointer">
+                        <div class="text-4xl mb-3">🎮</div>
+                        <h3 class="font-bold text-lg">Gaming ASMR</h3>
+                        <p class="text-sm text-white/70 mt-2">Interactive experiences</p>
+                    </div>
+                    <div class="category-card bg-white/10 rounded-xl p-6 hover:bg-white/20 transition-colors cursor-pointer">
+                        <div class="text-4xl mb-3">🤖</div>
+                        <h3 class="font-bold text-lg">AI Generated</h3>
+                        <p class="text-sm text-white/70 mt-2">Custom soundscapes</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Player Screen -->
+            <div id="player-screen" class="hidden">
+                <div class="max-w-md mx-auto">
+                    <!-- Album Art -->
+                    <div class="w-full aspect-square bg-gradient-to-br from-primary/40 to-accent-glow/40 rounded-3xl mb-8 flex items-center justify-center shadow-glow">
+                        <svg class="text-white w-32 h-32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+                        </svg>
+                    </div>
+
+                    <!-- Track Info -->
+                    <div class="text-center mb-6">
+                        <h3 id="track-title" class="text-2xl font-bold mb-2">Peaceful Rain</h3>
+                        <p id="track-artist" class="text-white/70">AI ASMR Collection</p>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="mb-8">
+                        <div class="flex justify-between text-sm text-white/70 mb-2">
+                            <span id="current-time">0:00</span>
+                            <span id="duration">3:45</span>
+                        </div>
+                        <input type="range" id="progress-bar" class="w-full h-2 bg-white/20 rounded-full appearance-none cursor-pointer" min="0" max="100" value="0">
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="flex justify-center items-center space-x-6 mb-6">
+                        <button id="prev-btn" class="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                        </button>
+
+                        <button id="play-btn" class="w-20 h-20 flex items-center justify-center rounded-full bg-primary hover:bg-primary/90 transition-colors shadow-lg shadow-primary/40">
+                            <svg id="play-icon" class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"></path>
+                            </svg>
+                            <svg id="pause-icon" class="w-10 h-10 hidden" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"></path>
+                            </svg>
+                        </button>
+
+                        <button id="next-btn" class="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Extra Controls -->
+                    <div class="flex justify-between items-center">
+                        <button id="favorite-btn" class="p-2">
+                            <svg class="w-6 h-6 text-white/70 hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
+                        </button>
+
+                        <button id="sleep-timer-btn" class="flex items-center space-x-2 px-4 py-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span id="sleep-timer-text" class="text-sm">Sleep Timer</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="relative z-10 bg-background-dark/80 backdrop-blur-lg border-t border-white/10">
+            <div class="flex justify-around items-center p-4">
+                <button class="nav-btn flex flex-col items-center space-y-1 text-white/50 hover:text-primary transition-colors" data-screen="welcome">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                    </svg>
+                    <span class="text-xs">Home</span>
+                </button>
+
+                <button class="nav-btn flex flex-col items-center space-y-1 text-white/50 hover:text-primary transition-colors" data-screen="categories">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                    </svg>
+                    <span class="text-xs">Categories</span>
+                </button>
+
+                <button class="nav-btn flex flex-col items-center space-y-1 text-primary transition-colors" data-screen="player">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                    <span class="text-xs">Player</span>
+                </button>
+
+                <button class="nav-btn flex flex-col items-center space-y-1 text-white/50 hover:text-primary transition-colors" data-screen="favorites">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                    <span class="text-xs">Favorites</span>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Sleep Timer Modal -->
+    <div id="sleep-timer-modal" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-6">
+        <div class="bg-background-dark rounded-2xl p-6 max-w-sm w-full border border-white/10">
+            <h3 class="text-2xl font-bold mb-6">Sleep Timer</h3>
+            <div class="grid grid-cols-3 gap-3 mb-6">
+                <button class="timer-option py-4 px-3 bg-white/10 rounded-xl hover:bg-primary/30 transition-colors" data-minutes="15">15 min</button>
+                <button class="timer-option py-4 px-3 bg-white/10 rounded-xl hover:bg-primary/30 transition-colors" data-minutes="30">30 min</button>
+                <button class="timer-option py-4 px-3 bg-white/10 rounded-xl hover:bg-primary/30 transition-colors" data-minutes="45">45 min</button>
+                <button class="timer-option py-4 px-3 bg-white/10 rounded-xl hover:bg-primary/30 transition-colors" data-minutes="60">1 hour</button>
+                <button class="timer-option py-4 px-3 bg-white/10 rounded-xl hover:bg-primary/30 transition-colors" data-minutes="90">1.5 hours</button>
+                <button class="timer-option py-4 px-3 bg-white/10 rounded-xl hover:bg-primary/30 transition-colors" data-minutes="120">2 hours</button>
+            </div>
+            <button id="cancel-timer" class="w-full py-3 bg-white/10 rounded-xl hover:bg-white/20 transition-colors">Cancel</button>
+        </div>
+    </div>
+
+    <!-- App Scripts -->
+    <script src="js/asmr-content-database.js"></script>
+    <script src="js/capacitor.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/offline.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/sleep-timer.js"></script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('Service Worker registered:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

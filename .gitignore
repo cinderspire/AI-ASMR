@@ -1,0 +1,76 @@
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+.output/
+
+# Android
+android/app/build/
+android/app/release/
+android/.gradle/
+android/.idea/
+android/local.properties
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# iOS
+ios/App/Pods/
+ios/App/build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xcworkspace
+!default.xcworkspace
+*.xcuserstate
+*.moved-aside
+*.ipa
+
+# Keystore (NEVER commit to public repos!)
+*.keystore
+*.jks
+keystore.properties
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Capacitor
+.capacitor/
+
+# PWA
+workbox-*.js
+sw.js.map
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,199 @@
+<svg width="2732" height="2732" viewBox="0 0 2732 2732" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <defs>
+    <radialGradient id="splashBg" cx="50%" cy="30%">
+      <stop offset="0%" style="stop-color:#9344f0;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#191121;stop-opacity:1" />
+    </radialGradient>
+    <linearGradient id="splashMic" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0d4f7;stop-opacity:1" />
+    </linearGradient>
+    <filter id="splashGlow">
+      <feGaussianBlur stdDeviation="20" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark Background -->
+  <rect width="2732" height="2732" fill="#191121"/>
+
+  <!-- Radial Gradient Overlay -->
+  <rect width="2732" height="2732" fill="url(#splashBg)" opacity="0.7"/>
+
+  <!-- Large Decorative Circles -->
+  <circle cx="400" cy="400" r="250" fill="#9344f0" opacity="0.15"/>
+  <circle cx="2332" cy="2332" r="400" fill="#7c3aed" opacity="0.1"/>
+  <circle cx="2332" cy="400" r="200" fill="#a855f7" opacity="0.08"/>
+  <circle cx="1366" cy="800" r="150" fill="#9344f0" opacity="0.12"/>
+
+  <!-- Main Content Group -->
+  <g transform="translate(1366, 900)">
+    <!-- Microphone Icon (Larger) -->
+    <g transform="translate(-200, 0)" filter="url(#splashGlow)">
+      <!-- Mic Body -->
+      <path d="M200 100 C200 44.8 155.2 0 100 0 C44.8 0 0 44.8 0 100 L0 300 C0 355.2 44.8 400 100 400 C155.2 400 200 355.2 200 300 Z"
+            fill="url(#splashMic)"
+            stroke="#ffffff"
+            stroke-width="12"/>
+
+      <!-- Mic Stand Arc -->
+      <path d="M-100 300 L-100 360 C-100 440 -40 500 50 525 L150 525 C240 500 300 440 300 360 L300 300"
+            stroke="url(#splashMic)"
+            stroke-width="20"
+            fill="none"
+            stroke-linecap="round"/>
+
+      <!-- Mic Stand Line -->
+      <line x1="100" y1="525" x2="100" y2="650"
+            stroke="url(#splashMic)"
+            stroke-width="20"
+            stroke-linecap="round"/>
+
+      <!-- Mic Base -->
+      <ellipse cx="100" cy="650" rx="120" ry="30"
+               fill="url(#splashMic)"/>
+
+      <!-- Animated Sound Waves -->
+      <g opacity="0.8">
+        <!-- Left waves -->
+        <path d="M-120 200"
+              stroke="#ffffff"
+              stroke-width="10"
+              stroke-linecap="round">
+          <animate attributeName="d"
+                   values="M-120 200 L-140 200;M-120 200 L-200 200;M-120 200 L-140 200"
+                   dur="2s"
+                   repeatCount="indefinite"/>
+          <animate attributeName="opacity"
+                   values="0.8;0.3;0.8"
+                   dur="2s"
+                   repeatCount="indefinite"/>
+        </path>
+
+        <path d="M-100 150"
+              stroke="#ffffff"
+              stroke-width="10"
+              stroke-linecap="round">
+          <animate attributeName="d"
+                   values="M-100 150 L-120 150;M-100 150 L-180 150;M-100 150 L-120 150"
+                   dur="2s"
+                   begin="0.3s"
+                   repeatCount="indefinite"/>
+          <animate attributeName="opacity"
+                   values="0.7;0.2;0.7"
+                   dur="2s"
+                   begin="0.3s"
+                   repeatCount="indefinite"/>
+        </path>
+
+        <path d="M-90 250"
+              stroke="#ffffff"
+              stroke-width="10"
+              stroke-linecap="round">
+          <animate attributeName="d"
+                   values="M-90 250 L-110 250;M-90 250 L-170 250;M-90 250 L-110 250"
+                   dur="2s"
+                   begin="0.6s"
+                   repeatCount="indefinite"/>
+          <animate attributeName="opacity"
+                   values="0.6;0.2;0.6"
+                   dur="2s"
+                   begin="0.6s"
+                   repeatCount="indefinite"/>
+        </path>
+
+        <!-- Right waves -->
+        <path d="M320 200"
+              stroke="#ffffff"
+              stroke-width="10"
+              stroke-linecap="round">
+          <animate attributeName="d"
+                   values="M320 200 L340 200;M320 200 L400 200;M320 200 L340 200"
+                   dur="2s"
+                   begin="0.2s"
+                   repeatCount="indefinite"/>
+          <animate attributeName="opacity"
+                   values="0.8;0.3;0.8"
+                   dur="2s"
+                   begin="0.2s"
+                   repeatCount="indefinite"/>
+        </path>
+
+        <path d="M300 150"
+              stroke="#ffffff"
+              stroke-width="10"
+              stroke-linecap="round">
+          <animate attributeName="d"
+                   values="M300 150 L320 150;M300 150 L380 150;M300 150 L320 150"
+                   dur="2s"
+                   begin="0.5s"
+                   repeatCount="indefinite"/>
+          <animate attributeName="opacity"
+                   values="0.7;0.2;0.7"
+                   dur="2s"
+                   begin="0.5s"
+                   repeatCount="indefinite"/>
+        </path>
+
+        <path d="M290 250"
+              stroke="#ffffff"
+              stroke-width="10"
+              stroke-linecap="round">
+          <animate attributeName="d"
+                   values="M290 250 L310 250;M290 250 L370 250;M290 250 L310 250"
+                   dur="2s"
+                   begin="0.8s"
+                   repeatCount="indefinite"/>
+          <animate attributeName="opacity"
+                   values="0.6;0.2;0.6"
+                   dur="2s"
+                   begin="0.8s"
+                   repeatCount="indefinite"/>
+        </path>
+      </g>
+    </g>
+
+    <!-- Title Text -->
+    <text x="0" y="800"
+          font-family="system-ui, -apple-system, sans-serif"
+          font-size="120"
+          font-weight="bold"
+          fill="#ffffff"
+          text-anchor="middle"
+          letter-spacing="4"
+          filter="url(#splashGlow)">Immersive ASMR</text>
+
+    <text x="0" y="940"
+          font-family="system-ui, -apple-system, sans-serif"
+          font-size="120"
+          font-weight="bold"
+          fill="#9344f0"
+          text-anchor="middle"
+          letter-spacing="4"
+          filter="url(#splashGlow)">For Your Soul</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="1080"
+          font-family="system-ui, -apple-system, sans-serif"
+          font-size="50"
+          font-weight="normal"
+          fill="#ffffff"
+          fill-opacity="0.7"
+          text-anchor="middle"
+          letter-spacing="2">AI-Powered Personalized Soundscapes</text>
+  </g>
+
+  <!-- Bottom App Name -->
+  <text x="1366" y="2500"
+        font-family="system-ui, -apple-system, sans-serif"
+        font-size="80"
+        font-weight="bold"
+        fill="#ffffff"
+        fill-opacity="0.5"
+        text-anchor="middle"
+        letter-spacing="6">AI ASMR</text>
+</svg>
