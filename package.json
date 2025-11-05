@@ -4,8 +4,11 @@
   "description": "AI-powered ASMR mobile application with personalized soundscapes",
   "main": "index.js",
   "scripts": {
-    "dev": "npx http-server www -p 8080",
-    "build": "echo 'Build complete'",
+    "dev": "./scripts/dev.sh",
+    "build:debug": "./scripts/build.sh debug",
+    "build:release": "./scripts/build.sh release",
+    "build:bundle": "./scripts/build.sh bundle",
+    "clean": "./scripts/clean.sh",
     "sync": "npx cap sync",
     "sync:android": "npx cap sync android",
     "sync:ios": "npx cap sync ios",

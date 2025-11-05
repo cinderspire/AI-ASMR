@@ -7,6 +7,7 @@ const PRECACHE_URLS = [
     '/',
     '/index.html',
     '/css/app.css',
+    '/js/asmr-content-database.js',
     '/js/app.js',
     '/js/capacitor.js',
     '/js/theme.js',
