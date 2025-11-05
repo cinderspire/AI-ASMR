@@ -1,5 +1,12 @@
 apply plugin: 'com.android.application'
 
+// Load keystore properties from file (secure)
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
 android {
     namespace "com.aiasmr.app"
     compileSdk rootProject.ext.compileSdkVersion
@@ -19,10 +26,12 @@ android {
 
     signingConfigs {
         release {
-            storeFile file('../../ai-asmr.keystore')
-            storePassword 'aiasmr2024'
-            keyAlias 'ai-asmr'
-            keyPassword 'aiasmr2024'
+            if (keystorePropertiesFile.exists()) {
+                storeFile file(keystoreProperties['storeFile'])
+                storePassword keystoreProperties['storePassword']
+                keyAlias keystoreProperties['keyAlias']
+                keyPassword keystoreProperties['keyPassword']
+            }
         }
     }
 

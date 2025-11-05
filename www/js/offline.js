@@ -27,7 +27,7 @@ class OfflineController {
         const message = document.getElementById('offline-message');
 
         if (banner && message) {
-            message.textContent = 'Bağlantı kuruldu! ✓';
+            message.textContent = 'Connected! ✓';
             banner.classList.remove('bg-yellow-500/90', 'hidden');
             banner.classList.add('bg-green-500/90');
 
@@ -48,7 +48,7 @@ class OfflineController {
         const message = document.getElementById('offline-message');
 
         if (banner && message) {
-            message.textContent = 'Çevrimdışı moddasınız';
+            message.textContent = 'You are offline';
             banner.classList.remove('hidden');
         }
 
