@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-dark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#191121;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f0a1a;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="purple-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9344f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5e27a3;stop-opacity:1" />
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1920" fill="url(#bg-dark)"/>
+
+  <!-- Status Bar -->
+  <rect width="1080" height="60" fill="#191121" opacity="0.95"/>
+  <text x="540" y="40" font-family="Arial" font-size="28" fill="white" text-anchor="middle">9:41</text>
+
+  <!-- Welcome Section -->
+  <g transform="translate(540, 400)">
+    <!-- App Icon -->
+    <circle cx="0" cy="0" r="150" fill="url(#purple-gradient)" filter="url(#glow)"/>
+
+    <!-- Microphone icon -->
+    <g>
+      <rect x="-30" y="-70" width="60" height="100" rx="30" fill="white" opacity="0.95"/>
+      <path d="M -50,-5 Q -50,40 0,65 Q 50,40 50,-5" stroke="white" stroke-width="10" fill="none" opacity="0.95" stroke-linecap="round"/>
+      <line x1="0" y1="65" x2="0" y2="95" stroke="white" stroke-width="10" opacity="0.95" stroke-linecap="round"/>
+      <line x1="-40" y1="95" x2="40" y2="95" stroke="white" stroke-width="10" opacity="0.95" stroke-linecap="round"/>
+
+      <!-- Sound waves -->
+      <path d="M -90,-40 Q -110,0 -90,40" stroke="white" stroke-width="8" fill="none" opacity="0.6" stroke-linecap="round"/>
+      <path d="M 90,-40 Q 110,0 90,40" stroke="white" stroke-width="8" fill="none" opacity="0.6" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- App Title -->
+  <text x="540" y="650" font-family="Arial" font-size="80" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="3">
+    AI ASMR
+  </text>
+
+  <!-- Tagline -->
+  <text x="540" y="730" font-family="Arial" font-size="32" fill="#c4a7e7" text-anchor="middle" opacity="0.9">
+    Immersive ASMR For Your Soul
+  </text>
+
+  <!-- Features List -->
+  <g transform="translate(180, 900)">
+    <!-- Feature 1 -->
+    <circle cx="0" cy="0" r="25" fill="#9344f0" opacity="0.3"/>
+    <text x="0" y="10" font-family="Arial" font-size="36" fill="#9344f0" text-anchor="middle" font-weight="bold">✓</text>
+    <text x="80" y="10" font-family="Arial" font-size="36" fill="white">40+ Curated ASMR Tracks</text>
+
+    <!-- Feature 2 -->
+    <g transform="translate(0, 100)">
+      <circle cx="0" cy="0" r="25" fill="#9344f0" opacity="0.3"/>
+      <text x="0" y="10" font-family="Arial" font-size="36" fill="#9344f0" text-anchor="middle" font-weight="bold">✓</text>
+      <text x="80" y="10" font-family="Arial" font-size="36" fill="white">Nature, Voice, Ambient &amp; More</text>
+    </g>
+
+    <!-- Feature 3 -->
+    <g transform="translate(0, 200)">
+      <circle cx="0" cy="0" r="25" fill="#9344f0" opacity="0.3"/>
+      <text x="0" y="10" font-family="Arial" font-size="36" fill="#9344f0" text-anchor="middle" font-weight="bold">✓</text>
+      <text x="80" y="10" font-family="Arial" font-size="36" fill="white">Smart Sleep Timer</text>
+    </g>
+
+    <!-- Feature 4 -->
+    <g transform="translate(0, 300)">
+      <circle cx="0" cy="0" r="25" fill="#9344f0" opacity="0.3"/>
+      <text x="0" y="10" font-family="Arial" font-size="36" fill="#9344f0" text-anchor="middle" font-weight="bold">✓</text>
+      <text x="80" y="10" font-family="Arial" font-size="36" fill="white">Works Offline</text>
+    </g>
+
+    <!-- Feature 5 -->
+    <g transform="translate(0, 400)">
+      <circle cx="0" cy="0" r="25" fill="#9344f0" opacity="0.3"/>
+      <text x="0" y="10" font-family="Arial" font-size="36" fill="#9344f0" text-anchor="middle" font-weight="bold">✓</text>
+      <text x="80" y="10" font-family="Arial" font-size="36" fill="white">Dark &amp; Light Themes</text>
+    </g>
+  </g>
+
+  <!-- Get Started Button -->
+  <rect x="190" y="1700" width="700" height="100" rx="50" fill="url(#purple-gradient)" filter="url(#glow)"/>
+  <text x="540" y="1765" font-family="Arial" font-size="42" font-weight="bold" fill="white" text-anchor="middle">
+    Get Started
+  </text>
+
+  <!-- Bottom Navigation Preview -->
+  <rect x="0" y="1820" width="1080" height="100" fill="#1a1024" opacity="0.95"/>
+  <circle cx="216" cy="1870" r="15" fill="#9344f0"/>
+  <circle cx="540" cy="1870" r="15" fill="#666"/>
+  <circle cx="864" cy="1870" r="15" fill="#666"/>
+</svg>

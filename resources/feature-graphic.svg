@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="500" viewBox="0 0 1024 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#191121;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2d1b3d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#191121;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9344f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5e27a3;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="500" fill="url(#bg-gradient)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="150" fill="#9344f0" opacity="0.05"/>
+  <circle cx="900" cy="400" r="200" fill="#5e27a3" opacity="0.05"/>
+
+  <!-- App Icon (Left side) -->
+  <g transform="translate(80, 125)">
+    <!-- Icon background circle -->
+    <circle cx="125" cy="125" r="125" fill="url(#accent-gradient)" filter="url(#glow)"/>
+
+    <!-- Microphone icon simplified -->
+    <g transform="translate(125, 125)">
+      <!-- Mic body -->
+      <rect x="-25" y="-60" width="50" height="80" rx="25" fill="white" opacity="0.95"/>
+
+      <!-- Mic stand -->
+      <path d="M -40,-5 Q -40,30 0,50 Q 40,30 40,-5" stroke="white" stroke-width="8" fill="none" opacity="0.95" stroke-linecap="round"/>
+      <line x1="0" y1="50" x2="0" y2="75" stroke="white" stroke-width="8" opacity="0.95" stroke-linecap="round"/>
+      <line x1="-30" y1="75" x2="30" y2="75" stroke="white" stroke-width="8" opacity="0.95" stroke-linecap="round"/>
+
+      <!-- Sound waves -->
+      <path d="M -70,-30 Q -80,-10 -70,10" stroke="white" stroke-width="6" fill="none" opacity="0.6" stroke-linecap="round"/>
+      <path d="M 70,-30 Q 80,-10 70,10" stroke="white" stroke-width="6" fill="none" opacity="0.6" stroke-linecap="round"/>
+      <path d="M -90,-40 Q -105,-10 -90,20" stroke="white" stroke-width="5" fill="none" opacity="0.4" stroke-linecap="round"/>
+      <path d="M 90,-40 Q 105,-10 90,20" stroke="white" stroke-width="5" fill="none" opacity="0.4" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Text Content (Right side) -->
+  <g transform="translate(380, 250)">
+    <!-- App Title -->
+    <text x="0" y="-80" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="white" letter-spacing="2">
+      AI ASMR
+    </text>
+
+    <!-- Tagline -->
+    <text x="0" y="-20" font-family="Arial, sans-serif" font-size="28" fill="#e0c5ff" opacity="0.9">
+      Immersive ASMR For Your Soul
+    </text>
+
+    <!-- Feature badges -->
+    <g transform="translate(0, 40)">
+      <!-- Badge 1: 40+ Tracks -->
+      <rect x="0" y="0" width="180" height="50" rx="25" fill="url(#accent-gradient)" opacity="0.8"/>
+      <text x="90" y="32" font-family="Arial, sans-serif" font-size="20" font-weight="600" fill="white" text-anchor="middle">
+        40+ Tracks
+      </text>
+
+      <!-- Badge 2: AI-Powered -->
+      <rect x="200" y="0" width="180" height="50" rx="25" fill="url(#accent-gradient)" opacity="0.8"/>
+      <text x="290" y="32" font-family="Arial, sans-serif" font-size="20" font-weight="600" fill="white" text-anchor="middle">
+        AI-Powered
+      </text>
+
+      <!-- Badge 3: Sleep Timer -->
+      <rect x="400" y="0" width="200" height="50" rx="25" fill="url(#accent-gradient)" opacity="0.8"/>
+      <text x="500" y="32" font-family="Arial, sans-serif" font-size="20" font-weight="600" fill="white" text-anchor="middle">
+        Sleep Timer
+      </text>
+    </g>
+  </g>
+
+  <!-- Bottom accent line -->
+  <rect x="0" y="495" width="1024" height="5" fill="url(#accent-gradient)" opacity="0.5"/>
+</svg>

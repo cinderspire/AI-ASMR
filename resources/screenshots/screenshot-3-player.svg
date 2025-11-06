@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-dark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d1b3d;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#191121;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f0a1a;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="purple-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9344f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5e27a3;stop-opacity:1" />
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1920" fill="url(#bg-dark)"/>
+
+  <!-- Decorative glow -->
+  <circle cx="540" cy="600" r="400" fill="#9344f0" opacity="0.1" filter="url(#glow)"/>
+
+  <!-- Status Bar -->
+  <rect width="1080" height="60" fill="#191121" opacity="0.3"/>
+  <text x="540" y="40" font-family="Arial" font-size="28" fill="white" text-anchor="middle">9:41</text>
+
+  <!-- Back Button -->
+  <text x="90" y="160" font-family="Arial" font-size="48" fill="white">‹</text>
+  <text x="990" y="160" font-family="Arial" font-size="48" fill="white">⋮</text>
+
+  <!-- Album Art / Visualization -->
+  <g transform="translate(540, 550)">
+    <!-- Large circular visualization -->
+    <circle cx="0" cy="0" r="280" fill="url(#purple-gradient)" opacity="0.2" filter="url(#glow)"/>
+    <circle cx="0" cy="0" r="250" fill="url(#purple-gradient)" opacity="0.3"/>
+    <circle cx="0" cy="0" r="220" fill="url(#purple-gradient)" opacity="0.4"/>
+
+    <!-- Icon in center -->
+    <circle cx="0" cy="0" r="180" fill="url(#purple-gradient)" filter="url(#glow)"/>
+
+    <!-- Rain emoji/icon -->
+    <text x="0" y="80" font-family="Arial" font-size="160" fill="white" text-anchor="middle" opacity="0.95">🌧️</text>
+
+    <!-- Animated sound waves (static representation) -->
+    <g opacity="0.6">
+      <circle cx="-240" cy="0" r="8" fill="white"/>
+      <circle cx="-200" cy="-30" r="8" fill="white"/>
+      <circle cx="-160" cy="20" r="8" fill="white"/>
+
+      <circle cx="240" cy="0" r="8" fill="white"/>
+      <circle cx="200" cy="30" r="8" fill="white"/>
+      <circle cx="160" cy="-20" r="8" fill="white"/>
+    </g>
+  </g>
+
+  <!-- Track Info -->
+  <g transform="translate(540, 950)">
+    <text x="0" y="0" font-family="Arial" font-size="52" font-weight="bold" fill="white" text-anchor="middle">
+      Peaceful Rain
+    </text>
+    <text x="0" y="60" font-family="Arial" font-size="36" fill="#c4a7e7" text-anchor="middle" opacity="0.8">
+      AI ASMR Collection
+    </text>
+    <text x="0" y="110" font-family="Arial" font-size="28" fill="#888" text-anchor="middle">
+      Nature Sounds
+    </text>
+  </g>
+
+  <!-- Favorite Heart -->
+  <circle cx="540" cy="1120" r="35" fill="#2a1f3d" opacity="0.6"/>
+  <text x="540" y="1135" font-family="Arial" font-size="40" fill="#9344f0" text-anchor="middle">♥</text>
+
+  <!-- Progress Bar -->
+  <g transform="translate(140, 1230)">
+    <!-- Background bar -->
+    <rect x="0" y="0" width="800" height="8" rx="4" fill="#2a1f3d"/>
+    <!-- Progress -->
+    <rect x="0" y="0" width="480" height="8" rx="4" fill="url(#purple-gradient)"/>
+    <!-- Thumb -->
+    <circle cx="480" cy="4" r="18" fill="white" filter="url(#glow)"/>
+
+    <!-- Time labels -->
+    <text x="0" y="50" font-family="Arial" font-size="28" fill="#888">1:25</text>
+    <text x="800" y="50" font-family="Arial" font-size="28" fill="#888" text-anchor="end">3:45</text>
+  </g>
+
+  <!-- Playback Controls -->
+  <g transform="translate(540, 1400)">
+    <!-- Previous button -->
+    <circle cx="-200" cy="0" r="50" fill="#2a1f3d" opacity="0.6"/>
+    <text x="-200" y="15" font-family="Arial" font-size="48" fill="white" text-anchor="middle">⏮</text>
+
+    <!-- Play/Pause button (main) -->
+    <circle cx="0" cy="0" r="80" fill="url(#purple-gradient)" filter="url(#glow)"/>
+    <text x="8" y="20" font-family="Arial" font-size="64" fill="white" text-anchor="middle">⏸</text>
+
+    <!-- Next button -->
+    <circle cx="200" cy="0" r="50" fill="#2a1f3d" opacity="0.6"/>
+    <text x="200" y="15" font-family="Arial" font-size="48" fill="white" text-anchor="middle">⏭</text>
+
+    <!-- Shuffle -->
+    <text x="-350" y="15" font-family="Arial" font-size="36" fill="#666" text-anchor="middle">🔀</text>
+
+    <!-- Repeat -->
+    <text x="350" y="15" font-family="Arial" font-size="36" fill="#666" text-anchor="middle">🔁</text>
+  </g>
+
+  <!-- Additional Controls -->
+  <g transform="translate(540, 1600)">
+    <!-- Sleep Timer -->
+    <circle cx="-180" cy="0" r="45" fill="#2a1f3d" opacity="0.6"/>
+    <text x="-180" y="15" font-family="Arial" font-size="36" fill="#c4a7e7" text-anchor="middle">⏱️</text>
+
+    <!-- Volume -->
+    <circle cx="0" cy="0" r="45" fill="#2a1f3d" opacity="0.6"/>
+    <text x="0" y="15" font-family="Arial" font-size="36" fill="#c4a7e7" text-anchor="middle">🔊</text>
+
+    <!-- Queue -->
+    <circle cx="180" cy="0" r="45" fill="#2a1f3d" opacity="0.6"/>
+    <text x="180" y="15" font-family="Arial" font-size="36" fill="#c4a7e7" text-anchor="middle">📋</text>
+  </g>
+
+  <!-- Up Next Preview -->
+  <g transform="translate(90, 1750)">
+    <text x="0" y="0" font-family="Arial" font-size="28" fill="#888">Up Next:</text>
+    <text x="200" y="0" font-family="Arial" font-size="28" fill="#c4a7e7">Forest Ambience</text>
+  </g>
+
+  <!-- Bottom Navigation -->
+  <rect x="0" y="1820" width="1080" height="100" fill="#1a1024" opacity="0.95"/>
+  <g transform="translate(0, 1840)">
+    <text x="216" y="45" font-family="Arial" font-size="36" fill="#666" text-anchor="middle">🏠</text>
+    <text x="540" y="45" font-family="Arial" font-size="36" fill="#666" text-anchor="middle">♥</text>
+    <text x="864" y="45" font-family="Arial" font-size="36" fill="#666" text-anchor="middle">⚙️</text>
+  </g>
+</svg>

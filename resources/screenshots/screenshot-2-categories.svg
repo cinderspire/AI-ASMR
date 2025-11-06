@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-dark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#191121;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f0a1a;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="purple-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9344f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5e27a3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1920" fill="url(#bg-dark)"/>
+
+  <!-- Status Bar -->
+  <rect width="1080" height="60" fill="#191121" opacity="0.95"/>
+  <text x="540" y="40" font-family="Arial" font-size="28" fill="white" text-anchor="middle">9:41</text>
+
+  <!-- Header -->
+  <text x="90" y="180" font-family="Arial" font-size="56" font-weight="bold" fill="white">Discover</text>
+  <text x="90" y="260" font-family="Arial" font-size="32" fill="#c4a7e7" opacity="0.8">Choose your perfect sound</text>
+
+  <!-- Search Bar -->
+  <rect x="90" y="310" width="900" height="80" rx="40" fill="#2a1f3d" opacity="0.8"/>
+  <text x="170" y="365" font-family="Arial" font-size="32" fill="#888">Search tracks...</text>
+  <text x="930" y="365" font-family="Arial" font-size="40" fill="#888">🔍</text>
+
+  <!-- Category Pills -->
+  <g transform="translate(90, 440)">
+    <rect x="0" y="0" width="160" height="70" rx="35" fill="url(#purple-gradient)"/>
+    <text x="80" y="47" font-family="Arial" font-size="28" font-weight="600" fill="white" text-anchor="middle">All</text>
+
+    <rect x="180" y="0" width="180" height="70" rx="35" fill="#2a1f3d"/>
+    <text x="270" y="47" font-family="Arial" font-size="28" font-weight="600" fill="#c4a7e7" text-anchor="middle">Nature</text>
+
+    <rect x="380" y="0" width="200" height="70" rx="35" fill="#2a1f3d"/>
+    <text x="480" y="47" font-family="Arial" font-size="28" font-weight="600" fill="#c4a7e7" text-anchor="middle">Whispers</text>
+
+    <rect x="600" y="0" width="200" height="70" rx="35" fill="#2a1f3d"/>
+    <text x="700" y="47" font-family="Arial" font-size="28" font-weight="600" fill="#c4a7e7" text-anchor="middle">Ambient</text>
+  </g>
+
+  <!-- Track List -->
+  <g transform="translate(90, 580)">
+    <!-- Track 1 -->
+    <g>
+      <rect x="0" y="0" width="900" height="140" rx="20" fill="#1f1630" opacity="0.6"/>
+      <circle cx="70" cy="70" r="45" fill="url(#purple-gradient)"/>
+      <text x="70" y="83" font-family="Arial" font-size="40" fill="white" text-anchor="middle">🌊</text>
+
+      <text x="150" y="55" font-family="Arial" font-size="36" font-weight="600" fill="white">Peaceful Rain</text>
+      <text x="150" y="95" font-family="Arial" font-size="28" fill="#c4a7e7" opacity="0.7">Nature Sounds · 3:45</text>
+
+      <text x="850" y="75" font-family="Arial" font-size="32" fill="#9344f0">♥</text>
+    </g>
+
+    <!-- Track 2 -->
+    <g transform="translate(0, 160)">
+      <rect x="0" y="0" width="900" height="140" rx="20" fill="#1f1630" opacity="0.6"/>
+      <circle cx="70" cy="70" r="45" fill="url(#purple-gradient)"/>
+      <text x="70" y="83" font-family="Arial" font-size="40" fill="white" text-anchor="middle">🌲</text>
+
+      <text x="150" y="55" font-family="Arial" font-size="36" font-weight="600" fill="white">Forest Ambience</text>
+      <text x="150" y="95" font-family="Arial" font-size="28" fill="#c4a7e7" opacity="0.7">Nature Sounds · 8:20</text>
+
+      <text x="850" y="75" font-family="Arial" font-size="32" fill="#666">♡</text>
+    </g>
+
+    <!-- Track 3 -->
+    <g transform="translate(0, 320)">
+      <rect x="0" y="0" width="900" height="140" rx="20" fill="#1f1630" opacity="0.6"/>
+      <circle cx="70" cy="70" r="45" fill="url(#purple-gradient)"/>
+      <text x="70" y="83" font-family="Arial" font-size="40" fill="white" text-anchor="middle">🌊</text>
+
+      <text x="150" y="55" font-family="Arial" font-size="36" font-weight="600" fill="white">Ocean Waves</text>
+      <text x="150" y="95" font-family="Arial" font-size="28" fill="#c4a7e7" opacity="0.7">Nature Sounds · 12:15</text>
+
+      <text x="850" y="75" font-family="Arial" font-size="32" fill="#9344f0">♥</text>
+    </g>
+
+    <!-- Track 4 -->
+    <g transform="translate(0, 480)">
+      <rect x="0" y="0" width="900" height="140" rx="20" fill="#1f1630" opacity="0.6"/>
+      <circle cx="70" cy="70" r="45" fill="url(#purple-gradient)"/>
+      <text x="70" y="83" font-family="Arial" font-size="40" fill="white" text-anchor="middle">🔥</text>
+
+      <text x="150" y="55" font-family="Arial" font-size="36" font-weight="600" fill="white">Crackling Fire</text>
+      <text x="150" y="95" font-family="Arial" font-size="28" fill="#c4a7e7" opacity="0.7">Ambient · 6:30</text>
+
+      <text x="850" y="75" font-family="Arial" font-size="32" fill="#666">♡</text>
+    </g>
+
+    <!-- Track 5 -->
+    <g transform="translate(0, 640)">
+      <rect x="0" y="0" width="900" height="140" rx="20" fill="#1f1630" opacity="0.6"/>
+      <circle cx="70" cy="70" r="45" fill="url(#purple-gradient)"/>
+      <text x="70" y="83" font-family="Arial" font-size="40" fill="white" text-anchor="middle">💭</text>
+
+      <text x="150" y="55" font-family="Arial" font-size="36" font-weight="600" fill="white">Soft Whisper</text>
+      <text x="150" y="95" font-family="Arial" font-size="28" fill="#c4a7e7" opacity="0.7">Whispers · 4:50</text>
+
+      <text x="850" y="75" font-family="Arial" font-size="32" fill="#666">♡</text>
+    </g>
+
+    <!-- Track 6 -->
+    <g transform="translate(0, 800)">
+      <rect x="0" y="0" width="900" height="140" rx="20" fill="#1f1630" opacity="0.6"/>
+      <circle cx="70" cy="70" r="45" fill="url(#purple-gradient)"/>
+      <text x="70" y="83" font-family="Arial" font-size="40" fill="white" text-anchor="middle">🧘</text>
+
+      <text x="150" y="55" font-family="Arial" font-size="36" font-weight="600" fill="white">Deep Meditation</text>
+      <text x="150" y="95" font-family="Arial" font-size="28" fill="#c4a7e7" opacity="0.7">Relaxation · 15:00</text>
+
+      <text x="850" y="75" font-family="Arial" font-size="32" fill="#9344f0">♥</text>
+    </g>
+  </g>
+
+  <!-- Bottom Navigation -->
+  <rect x="0" y="1820" width="1080" height="100" fill="#1a1024" opacity="0.95"/>
+  <g transform="translate(0, 1840)">
+    <text x="216" y="45" font-family="Arial" font-size="36" fill="#9344f0" text-anchor="middle">🏠</text>
+    <text x="540" y="45" font-family="Arial" font-size="36" fill="#666" text-anchor="middle">♥</text>
+    <text x="864" y="45" font-family="Arial" font-size="36" fill="#666" text-anchor="middle">⚙️</text>
+  </g>
+</svg>
